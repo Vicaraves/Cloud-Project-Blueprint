@@ -111,6 +111,12 @@ Needed: [✅/❌]
 
 Details: [e.g., Use Security Lists if NSGs are not flexible enough for the use-case]
 
+DNS (Domain Name System):
+
+Needed: ✅
+
+Details: [e.g., A record for resume.yourdomain.com pointing to the Object Storage bucket's public URL, and a CNAME record for api.resume.yourdomain.com pointing to the API Gateway endpoint.]
+
 3. Compute & Storage
 Compute Instances:
 
