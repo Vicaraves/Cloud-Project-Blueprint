@@ -1,0 +1,223 @@
+OCI Master Blueprint
+This blueprint is a comprehensive, customizable checklist for deploying any project on Oracle Cloud Infrastructure it can be edited and used for other cloud service providers too.
+
+1. OCI IAM & Security
+Compartment:
+
+Needed: [✅/❌]
+
+Name: [e.g., core-infra-comp]
+
+Users/Groups:
+
+Needed: [✅/❌]
+
+Details: [e.g., Define groups for admins, developers, and read-only users]
+
+Policies:
+
+Needed: [✅/❌]
+
+Details: [e.g., Allow group 'admins' to manage all resources in their compartment]
+
+Identity Domain Replication:
+
+Needed: [✅/❌]
+
+Details: [e.g., Needed for cross-region access for global teams]
+
+Object-level IAM:
+
+Needed: [✅/❌]
+
+Details: [e.g., Not needed for this project; group policies suffice]
+
+Vault:
+
+Needed: [✅/❌]
+
+Details: [e.g., For storing API keys and database passwords]
+
+Security Zones:
+
+Needed: [✅/❌]
+
+Details: [e.g., Use for a highly-sensitive project to enforce security policies]
+
+WAF (Web Application Firewall):
+
+Needed: [✅/❌]
+
+Details: [e.g., To protect public-facing applications]
+
+Cloud Guard:
+
+Needed: [✅/❌]
+
+Details: [e.g., Use to monitor for configuration drifts and threats]
+
+2. Networking
+VCN:
+
+Needed: [✅/❌]
+
+CIDR Block: [e.g., 10.0.0.0/16]
+
+Subnets:
+
+Public Subnet:
+
+Needed: [✅/❌]
+
+CIDR Block: [e.g., 10.0.1.0/24]
+
+Private Subnet:
+
+Needed: [✅/❌]
+
+CIDR Block: [e.g., 10.0.2.0/24]
+
+Gateways:
+
+Internet Gateway (IGW):
+
+Needed: [✅/❌]
+
+Details: [e.g., For inbound public traffic]
+
+NAT Gateway:
+
+Needed: [✅/❌]
+
+Details: [e.g., For private instances to access the internet]
+
+Service Gateway (SGW):
+
+Needed: [✅/❌]
+
+Details: [e.g., For private access to OCI services like Object Storage]
+
+Network Security:
+
+Network Security Groups (NSGs):
+
+Needed: [✅/❌]
+
+Details: [e.g., NSG for web servers to allow port 80/443]
+
+Security Lists:
+
+Needed: [✅/❌]
+
+Details: [e.g., Use Security Lists if NSGs are not flexible enough for the use-case]
+
+3. Compute & Storage
+Compute Instances:
+
+Needed: [✅/❌]
+
+Shape: [e.g., VM.Standard.E4.Flex]
+
+OS: [e.g., Oracle Linux 8]
+
+Block Volumes:
+
+Needed: [✅/❌]
+
+Details: [e.g., 50 GB boot volume, 250 GB data volume]
+
+File Storage:
+
+Needed: [✅/❌]
+
+Details: [e.g., For shared access between multiple compute instances]
+
+Object Storage:
+
+Needed: [✅/❌]
+
+Details: [e.g., For backups, logs, and static data]
+
+Load Balancer:
+
+Needed: [✅/❌]
+
+Details: [e.g., Public or private load balancer]
+
+Autoscaling:
+
+Needed: [✅/❌]
+
+Details: [e.g., Scale out when CPU utilization > 70%]
+
+4. Databases
+Database:
+
+Needed: [✅/❌]
+
+Type: [e.g., Autonomous Database, MySQL Database Service, OCI Database with an Exadata Shape]
+
+Details: [e.g., Configure High Availability (HA) and DR]
+
+5. Application Development & Operations
+API Gateway:
+
+Needed: [✅/❌]
+
+Details: [e.g., To expose and manage public APIs]
+
+Functions:
+
+Needed: [✅/❌]
+
+Details: [e.g., For serverless, event-driven compute]
+
+Container Engine for Kubernetes (OKE):
+
+Needed: [✅/❌]
+
+Details: [e.g., For container orchestration]
+
+DevOps:
+
+Needed: [✅/❌]
+
+Details: [e.g., For automated CI/CD pipelines]
+
+6. Monitoring, Logging & Disaster Recovery
+Monitoring & Logging:
+
+Needed: [✅/❌]
+
+Details: [e.g., Enable Audit Logs, VCN Flow Logs, and application logs]
+
+Disaster Recovery:
+
+Needed: [✅/❌]
+
+Details: [e.g., Use cross-region replication for storage volumes]
+
+Notifications:
+
+Needed: [✅/❌]
+
+Details: [e.g., For alerting on events and alarms]
+
+7. Data Analytics & AI
+Data Flow:
+
+Needed: [✅/❌]
+
+Details: [e.g., For running big data workloads]
+
+Data Catalog:
+
+Needed: [✅/❌]
+
+Details: [e.g., To create an inventory of data assets]
+
+AI Services:
+
+Needed: [✅/❌]
+
+Details: [e.g., Vision, Language, Anomaly Detection]
